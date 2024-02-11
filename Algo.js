@@ -167,3 +167,40 @@ function search(arr, tar, leftIndex, rightIndex) {
 console.log(recur_binary([-5, 2, 4, 6, 10], 10));
 console.log(recur_binary([-5, 2, 4, 6, 10], 6));
 console.log(recur_binary([-5, 2, 4, 6, 10], 20));
+
+/*bubble sort */
+
+function bublesort(arr) {
+  let swapped;
+  do {
+    swapped = false;
+    for (i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        temp = arr[i + 1];
+        arr[i + 1] = arr[i];
+        arr[i] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+
+  return arr;
+}
+
+console.log(bublesort([8, 20, -2, 4, -6]));
+
+ /* insertion sort */
+function iso(arr) {
+  for (i = 1; i < arr.length; i++) {
+    nti = arr[i];
+    j = i - 1;
+    while (j >= 0 && arr[j] > nti) {
+      arr[j + 1] = arr[j];
+      j = j - 1;
+    }
+    arr[j + 1] = nti;
+  }
+  return arr;
+}
+
+console.log(iso([8, 20, -2, 4, -6]));
