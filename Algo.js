@@ -140,3 +140,30 @@ function find(n, t) {
 console.log(find([-5, 2, 4, 6, 10], 10));
 console.log(find([-5, 2, 4, 6, 10], 6));
 console.log(find([-5, 2, 4, 6, 10], 20));
+
+/* recur binary search */
+
+function recur_binary(arr, tar) {
+  return search(arr, tar, 0, arr.length - 1);
+}
+
+function search(arr, tar, leftIndex, rightIndex) {
+  middleIndex = Math.ceil((leftIndex + rightIndex) / 2);
+
+  if (leftIndex > rightIndex) {
+    return -1;
+  }
+
+  if (tar == arr[middleIndex]) {
+    return middleIndex;
+  }
+  if (tar < arr[middleIndex]) {
+    return search(arr, tar, leftIndex, middleIndex - 1);
+  } else {
+    return search(arr, tar, middleIndex + 1, rightIndex);
+  }
+}
+
+console.log(recur_binary([-5, 2, 4, 6, 10], 10));
+console.log(recur_binary([-5, 2, 4, 6, 10], 6));
+console.log(recur_binary([-5, 2, 4, 6, 10], 20));
