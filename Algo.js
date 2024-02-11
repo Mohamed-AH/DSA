@@ -204,3 +204,24 @@ function iso(arr) {
 }
 
 console.log(iso([8, 20, -2, 4, -6]));
+
+/* quick sort*/
+function qsort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
+  pivot = arr[arr.length - 1];
+  left = [];
+  right = [];
+
+  for (i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+  return [...qsort(left), pivot, ...qsort(right)];
+}
+
+console.log(qsort([8, 20, -2, 4, -6]));
