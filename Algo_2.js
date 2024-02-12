@@ -23,3 +23,18 @@ function merge(leftarr, rightarr) {
 }
 
 console.log(mergesort([8, 20, -2, 4, -6]));
+
+/* cartesian product */
+
+function cart(arr1, arr2) {
+  sorted = [];
+
+  for (i = 0; i < arr1.length; i++) {
+    for (j = 0; j < arr2.length; j++) {
+      sorted.push([arr1[i], arr2[j]]);
+    }
+  }
+  return sorted;
+}
+
+console.log(cart([1, 2], [3, 4, 5]));
