@@ -52,3 +52,17 @@ function climbStair(n) {
 
 console.log(climbStair(4));
 
+/* tower of hanoi */
+
+function toh(n, fr, tr, ur) {
+  if (n === 1) {
+    console.log("Move disk 1 from " + fr + " to " + tr);
+    return;
+  }
+  toh(n - 1, fr, ur, tr);
+  console.log("move disk " + n + " from " + fr + " to " + tr);
+  toh(n - 1, ur, tr, fr);
+}
+
+toh(3, "A", "C", "B");
+
