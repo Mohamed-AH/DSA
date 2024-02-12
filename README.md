@@ -16,3 +16,15 @@ Algo.js
 
 algo_2.js
 /* merge sort */
+/* cartesian product */
+/* stair case */
+/* tower of hanoi */
+
+DS_1.js
+/* arrays */
+/* Objects */
+/* Set */
+/* map */
+/* stack */
+/* Queue (arrays) */
+/* Queue (Objects) */
