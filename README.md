@@ -9,7 +9,7 @@ Algo.js
 /* recursion fib */
 /* linear search */
 /* binary serch */
-/* recur binary*/
+/* recur binary */
 /* bubble sort */
 /* insertion sort */
 /* quick sort */
